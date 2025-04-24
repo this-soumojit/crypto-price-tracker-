@@ -1,0 +1,74 @@
+/* src/CryptoTable.css */
+.table-container {
+  max-height: 500px; /* Set the maximum height of the container */
+  overflow-y: auto;  /* Allow vertical scrolling when content exceeds max height */
+  margin-bottom: 20px; /* Optional: Add some space below the table */
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  table-layout: fixed; /* Fixed table layout to prevent fluctuation */
+}
+
+th,
+td {
+  padding: 12px 20px; /* Consistent padding */
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th {
+  background-color: transparent;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+td img {
+  width: 100px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  object-fit: contain; /* Ensure the image fits within the box */
+  border-radius: 0; /* Remove rounded corners for square images */
+}
+td:last-child {
+  text-align: center;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+  .crypto-table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  td img {
+    width: 16px;
+    height: 16px;
+  }
+}
